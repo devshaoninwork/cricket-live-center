@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Cricket Live Center — match search, scorecards and ball-by-ball commentary.">
+  <title>Cricket Live Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Cricket Live Center home"><span class="brand-ball">●</span><span>CRICKET <b>LIVE CENTER</b><small>Scores · Commentary · Match data</small></span></a>
+    <div class="top-right"><span class="status-dot"></span><span id="connection-label">DEMO MODE</span></div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">YOUR CRICKET COMMAND CENTER</div>
+      <h1>Every match.<br><span>Every moment.</span></h1>
+      <p>Find a fixture, follow the scorecard, and track ball-by-ball events in one place.</p>
+    </section>
+
+    <section class="panel search-panel" aria-labelledby="search-title">
+      <div class="section-head"><div><div class="eyebrow">MATCH FINDER</div><h2 id="search-title">Find your match</h2></div><span class="pill">ALL FORMATS</span></div>
+      <form id="search-form" class="search-grid">
+        <label class="field team-field"><span>Teams or keywords</span><input id="team-query" value="South Africa vs Australia" placeholder="e.g. India vs Australia" autocomplete="off"></label>
+        <label class="field"><span>Match date</span><input id="match-date" type="date"></label>
+        <label class="field"><span>Series / competition</span><select id="series"><option value="">All series</option><option>International cricket</option><option>ICC tournaments</option><option>Domestic leagues</option><option>Bilateral series</option></select></label>
+        <label class="field"><span>Format</span><select id="format"><option value="">Any format</option><option>Test</option><option>ODI</option><option>T20</option><option>T10</option></select></label>
+        <button class="primary search-button" type="submit">Search matches <span>↗</span></button>
+      </form>
+      <div class="helper">Search results depend on the connected data provider. Demo mode uses sample fixtures.</div>
+    </section>
+
+    <section class="results-section">
+      <div class="section-head"><div><div class="eyebrow">MATCH CENTER</div><h2>Matches <span id="match-count" class="count">1</span></h2></div><button id="refresh-button" class="secondary">↻ Refresh</button></div>
+      <div id="match-list" class="match-list" aria-live="polite"></div>
+    </section>
+
+    <section id="detail-panel" class="panel detail-panel">
+      <div id="detail-content"></div>
+    </section>
+    <footer><span>CRICKET LIVE CENTER</span><span id="last-updated">Demo data · Not live</span></footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

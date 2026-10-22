@@ -1,0 +1,15 @@
+{
+  "matches": [
+    {
+      "id": "provider-match-id",
+      "title": "Team A vs Team B",
+      "series": "Competition name",
+      "format": "ODI",
+      "status": "Live",
+      "startTime": "2026-10-22T04:00:00Z",
+      "venue": "Venue",
+      "scoreSummary": "Team A 120/3",
+      "isLive": true
+    }
+  ]
+}
